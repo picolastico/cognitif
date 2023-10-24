@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirection Aléatoire</title>
+    <script type="text/javascript">
+        // Liste des URLs de destination
+        var destinations = [
+            "https://www.youtube.com/",
+            "https://www.dailymotion.com/fr",
+            "https://partage.univ-angers.fr/mail#1"
+        ];
+
+        // Fonction pour rediriger de manière aléatoire
+        function redirectToRandomPage() {
+            // Génère un nombre aléatoire pour sélectionner une URL
+            var randomIndex = Math.floor(Math.random() * destinations.length);
+
+            // Redirige l'utilisateur vers l'URL sélectionnée
+            window.location.href = destinations[randomIndex];
+        }
+
+        // Appeler la fonction au chargement de la page
+        window.onload = redirectToRandomPage;
+    </script>
+</head>
+<body>
+    <p>Redirection en cours...</p>
+</body>
+</html>
